@@ -214,7 +214,7 @@ export default {
         .get(this.apiResUrl)
         .then((res) => {
           this.restaurants = res.data;
-          console.log(this.restaurants);
+          // console.log(this.restaurants);
         })
         .catch((error) => {
           console.log(error);
@@ -222,7 +222,7 @@ export default {
     },
     addResItem() {
       const exists = this.addRestaurants.some((item) => item.brandName === "");
-      console.log(exists);
+      // console.log(exists);
       // 使用陣列方法 some 檢查餐廳API是否有已存在的空白brandName
       if (!exists) {
         this.addRestaurants.push({
@@ -268,14 +268,14 @@ export default {
 
             // res.data是陣列用來檢查該餐廳名稱是否已存在
             const userData = res.data;
-            console.log(userData);
+            // console.log(userData);
             const userDataLength = userData.length;
-            console.log(userDataLength);
+            // console.log(userDataLength);
             // 使用陣列方法 some 檢查餐廳API是否有已存在的brandName
             const exists = userData.some(
               (item) => item.brandName === this.inputAddItem.addBrandName
             );
-            console.log(exists);
+            // console.log(exists);
             if (!exists) {
               axios.post(this.apiResUrl, {
                 type: this.inputAddItem.addType,

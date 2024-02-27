@@ -86,7 +86,7 @@ export default {
           axios
             .get(apiAdminUrl)
             .then((res) => {
-              console.log(res);
+              // console.log(res);
 
               // 法1、2、3
               // 假設網路請求成功取得資料集
@@ -108,12 +108,12 @@ export default {
 
               // 印出來看 newName.name 值
               // console.log("admin data updated:", newName.name);
-              console.log(
-                "admin data updated:",
-                newName.name,
-                newName.email,
-                newName.id
-              );
+              // console.log(
+              //   "admin data updated:",
+              //   newName.name,
+              //   newName.email,
+              //   newName.id
+              // );
 
               // 法4(不用pinia store)
               // localStorage.setItem("admin-info",JSON.stringify(res.data))

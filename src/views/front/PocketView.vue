@@ -225,7 +225,7 @@ export default {
         .then((res) => {
           // 請求成功會觸發/執行這個 function 函式
           this.restaurants = res.data;
-          console.log(this.uniqueTypes);
+          // console.log(this.uniqueTypes);
         })
         .catch((error) => {
           // 請求失敗則觸發/執行這個 function 函式
@@ -239,7 +239,7 @@ export default {
           console.log(res);
           // 將會員餐廳取得的資料賦值給既有restaurants
           this.userResList = res.data[0].userRestaurants;
-          console.log(this.userResList);
+          // console.log(this.userResList);
         })
         .catch((error) => {
           console.log(error);
@@ -259,14 +259,14 @@ export default {
         this.filterRes.filterBrandName = this.restaurants
           .filter((item) => item.type === this.tempRes.selectType)
           .map((item) => item.brandName);
-        console.log(this.filterRes.filterBrandName);
+        // console.log(this.filterRes.filterBrandName);
       } else {
         // 會員選擇全部受眾時，列出restaurants全部品牌名稱
         this.filterRes.filterBrandName = this.restaurants.map(
           (item) => item.brandName
         );
-        console.log(this.filterRes.filterBrandName);
-        console.log(this.filterRes.filterType);
+        // console.log(this.filterRes.filterBrandName);
+        // console.log(this.filterRes.filterType);
       }
       // 當會員回頭更改選品牌受眾。請讓其他兩個欄位重置成預設值
       this.tempRes.selectBrandName = "";
@@ -287,12 +287,12 @@ export default {
       this.filterRes.filterAddress = this.restaurants
         .filter((item) => item.brandName === this.tempRes.selectBrandName)
         .map((item) => item.address);
-      console.log(this.filterRes.filterAddress);
+      // console.log(this.filterRes.filterAddress);
 
       this.filterRes.filterMapUrl = this.restaurants
         .filter((item) => item.brandName === this.tempRes.selectBrandName)
         .map((item) => item.mapUrl);
-      console.log(this.filterRes.filterMapUrl);
+      // console.log(this.filterRes.filterMapUrl);
 
       // 在API中地址是字串型態，所以要寫filterRes.filterAddress[0]，如果不寫[0]在API會是陣列
       this.saveRes.saveAddress = this.filterRes.filterAddress[0];
@@ -304,7 +304,7 @@ export default {
         this.filterRes.filterType = this.restaurants
           .filter((item) => item.brandName === this.tempRes.selectBrandName)
           .map((item) => item.type);
-        console.log(this.filterRes.filterType);
+        // console.log(this.filterRes.filterType);
 
         // 將取得的真正品牌受眾值賦值給寫回api的saveRes.saveType屬性
         this.saveRes.saveType = this.filterRes.filterType[0];
@@ -326,7 +326,7 @@ export default {
 
             // res.data是陣列要變成物件後面才能用push，所以取第一個內容(這裡是物件)
             const userData = res.data[0];
-            console.log(userData);
+            // console.log(userData);
             const newRestaurant = {
               brandName: this.saveRes.saveBrandName,
               address: this.saveRes.saveAddress,
@@ -338,7 +338,7 @@ export default {
             const exists = userData.userRestaurants.some(
               (item) => item.brandName === newRestaurant.brandName
             );
-            console.log(exists);
+            // console.log(exists);
             if (!exists) {
               // 將一個新的餐廳物件（newRestaurant）添加到 userData 物件中的 userRestaurants 陣列中
               userData.userRestaurants.push(newRestaurant);
@@ -375,15 +375,15 @@ export default {
     // 使用v-for渲染列表時，每一列的移除按鈕上的@click事件處理程序會自動傳遞該行的數據（即item，包含type、brandName、address）給方法。所以點擊那行移除紐，會回傳那行的餐廳資料
     delPucket(item) {
       axios.get(this.apiUserResUrl).then((res) => {
-        console.log(res);
+        // console.log(res);
         const userData = res.data[0];
         const dataIndex = userData.userRestaurants.findIndex(
           (dataIndex) => dataIndex.brandName === item.brandName
         );
-        console.log(dataIndex);
+        // console.log(dataIndex);
 
         userData.userRestaurants.splice(dataIndex, 1);
-        console.log(userData);
+        // console.log(userData);
 
         axios
           .put(this.apiUserResIdUrl, userData)

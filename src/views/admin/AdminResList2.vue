@@ -170,7 +170,7 @@ export default {
           this.restaurants.forEach((item) => {
             item["addRowDisabled"] = true;
           });
-          console.log(this.restaurants);
+          // console.log(this.restaurants);
         })
         .catch((error) => {
           console.log(error);
@@ -220,18 +220,18 @@ export default {
         axios
           .get(this.apiResUrl)
           .then((res) => {
-            console.log(res);
+            // console.log(res);
 
             // res.data是陣列用來檢查該餐廳名稱是否已存在
             const userData = res.data;
-            console.log(userData);
+            // console.log(userData);
             const userDataLength = userData.length;
-            console.log(userDataLength);
+            // console.log(userDataLength);
             // 使用陣列方法 some 檢查餐廳API是否有已存在的brandName
             const exists = userData.some(
               (item) => item.brandName === this.inputAddItem.addBrandName
             );
-            console.log(exists);
+            // console.log(exists);
             if (!exists) {
               axios.post(this.apiResUrl, {
                 type: this.inputAddItem.addType,

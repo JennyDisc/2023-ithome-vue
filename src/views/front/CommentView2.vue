@@ -188,7 +188,7 @@ export default {
         .then((res) => {
           console.log(res);
           this.userResList = res.data[0].userRestaurants;
-          console.log(this.userResList);
+          // console.log(this.userResList);
 
           // 待DOM元素被完全渲染完再執行
           setTimeout(() => {
@@ -292,13 +292,13 @@ export default {
 
             // res.data是陣列要變成物件後面才能用push，所以取第一個內容(這裡是物件)
             const userData = res.data[0];
-            console.log(userData);
+            // console.log(userData);
 
             const dataIndex = userData.userRestaurants.findIndex(
               (dataIndex) =>
                 dataIndex.brandName === this.selectCardList.cardBrandName
             );
-            console.log(dataIndex);
+            // console.log(dataIndex);
 
             // 會員餐廳API沒有屬性comment，需要用物件取值的括弧記法在這邊新增屬性並為它賦值
             userData.userRestaurants[dataIndex]["comment"] =

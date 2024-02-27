@@ -120,12 +120,12 @@ export default {
 
               // 印出來看 newName.name 值
               // console.log("User data updated:", newName.name);
-              console.log(
-                "User data updated:",
-                newName.name,
-                newName.email,
-                newName.id
-              );
+              // console.log(
+              //   "User data updated:",
+              //   newName.name,
+              //   newName.email,
+              //   newName.id
+              // );
 
               // 法4(不用pinia store)
               // localStorage.setItem("user-info",JSON.stringify(res.data))
