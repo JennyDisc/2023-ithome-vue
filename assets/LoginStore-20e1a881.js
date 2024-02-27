@@ -1,1 +1,0 @@
-import{k as t}from"./index-028b5ae8.js";const i=t({id:"myStore",state:()=>({name:"",email:"",id:0}),actions:{updateName(e){this.name=e},updateEmail(e){this.email=e},updateId(e){this.id=e}}});export{i as u};
