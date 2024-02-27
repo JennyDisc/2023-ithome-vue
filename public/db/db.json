@@ -1,0 +1,34 @@
+{
+  "user": [
+    {
+      "name": "mary",
+      "email": "mary@gmail.com",
+      "password": "Aa123",
+      "id": 1
+    },
+    {
+      "name": "jack",
+      "email": "jack777@gmail.com",
+      "password": "Bb234",
+      "id": 2
+    },
+    {
+      "name": "ann",
+      "email": "ann555@gmail.com",
+      "password": "Cc33",
+      "id": 3
+    },
+    {
+      "name": "jay",
+      "email": "jay555@gmail.com",
+      "password": "Dd555",
+      "id": 4
+    },
+    {
+      "name": "test",
+      "email": "test@gmail.com",
+      "password": "Test",
+      "id": 5
+    }
+  ]
+}

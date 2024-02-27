@@ -1,0 +1,18 @@
+.main {
+    &-nav {
+        background-color: #50657b;
+
+        a {
+            display: block;
+            color: #ffffff;
+
+            &:hover {
+                background-color: #dddddd;
+            }
+        }
+
+        button:hover {
+            background-color: #dddddd;
+        }
+    }
+}

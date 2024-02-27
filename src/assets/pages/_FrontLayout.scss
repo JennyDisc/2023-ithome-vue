@@ -1,0 +1,86 @@
+.login {
+    &-img {
+        // height: 690px;
+        max-height: 100%;
+    }
+
+    &-buttom {
+        a {
+            text-decoration: none;
+
+            &:hover {
+                color: red;
+            }
+        }
+    }
+}
+
+.row {
+    &-front {
+        padding-top: 5%;
+
+        .front-form {
+            position: relative;
+            width: 400px;
+            height: 680px;
+
+            &:before {
+                content: "";
+                background-image: url("https://images.unsplash.com/photo-1578357078586-491adf1aa5ba?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+                background-size: cover;
+                /* 透明度50% */
+                opacity: 0.4;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                // 偽元素放在表格<form>下方
+                z-index: -1;
+
+                @include lg {
+                    display: none;
+                }
+            }
+
+            @include lg {
+                position: none;
+                height: auto;
+            }
+        }
+    }
+
+    &-login {
+        padding-top: 5%;
+
+        .login-form {
+            position: relative;
+            width: 400px;
+            height: 680px;
+
+            &:before {
+                content: "";
+                background-image: url("https://images.unsplash.com/photo-1692153141880-e63b3631c0c3?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+                background-size: cover;
+                /* 透明度50% */
+                opacity: 0.4;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                // 偽元素放在表格<form>下方
+                z-index: -1;
+
+                @include lg {
+                    display: none;
+                }
+            }
+
+            @include lg {
+                position: none;
+                height: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+.admminRes {
+    .table {
+        // 表格的列寬度將基於表格的第一行內容進行調整，不受後面的內容變化而影響
+        table-layout: fixed;
+    }
+}

@@ -1,0 +1,21 @@
+.comment {
+    &-card {
+        cursor: pointer;
+
+        &:hover {
+            .card {
+                &-header {
+                    background-color: $success;
+                }
+
+                &-body {
+                    background-color: $gray-300;
+                }
+            }
+        }
+
+        .comment-color{
+            background: pink;
+        }
+    }
+}
