@@ -10,7 +10,13 @@
         />
       </div>
       <div class="col-3 my-lg-auto front-form">
-        <v-form id="form" ref="form" v-slot="{ errors }" @submit="submitOrder" class="pt-5 pt-lg-0">
+        <v-form
+          id="form"
+          ref="form"
+          v-slot="{ errors }"
+          @submit="submitOrder"
+          class="pt-5 pt-lg-0"
+        >
           <h1 class="mb-4 text-center">華特義式餐廳</h1>
           <div class="mb-3">
             <v-field
@@ -63,6 +69,9 @@
         </div>
       </div>
       <div class="col"></div>
+      <div class="text-end login-buttom">
+        <RouterLink to="/adminlogin">點此進入後台管理</RouterLink>
+      </div>
     </div>
   </div>
 </template>
