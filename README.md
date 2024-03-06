@@ -4,6 +4,7 @@
 透過參賽複習 Vue 技術。以虛擬集團餐廳會員網站為主題，網站提供集團會員紀錄喜愛的旗下餐廳與評論，頁面內容有前（具響應式網頁特性）、後台頁面。練習使用框架進行開發，並加入 Pinia 跨元件狀態管理工具將元件統一管理。作品中使用 json-server 套件模擬前端開發時（尚未有後端技術支援）能讓前端開發測試用的 API 情境。
 
 ### -前台功能
+[前台 DEMO 影片](https://www.canva.com/design/DAF9-5-ZDnQ/sd-aw3D9LyWfuvsty0UUlA/watch?utm_content=DAF9-5-ZDnQ&utm_campaign=designshare&utm_medium=link&utm_source=editor) 
 (1)口袋餐廳：提供會員建立喜愛的集團餐飲品牌清單（即口袋餐廳）。會員具有新增與移除列表項目的權限。
 (2)餐廳實評：根據口袋餐廳建立的清單，對此填寫用餐體驗。會員具有新增與修改評論的權限。
 
@@ -12,6 +13,7 @@
     password：Test
 
 ### -後台功能
+[後台 DEMO 影片](https://www.canva.com/design/DAF9_Y0BAcw/bJ7eLee2Rk0LvOCqgTfpaA/watch?utm_content=DAF9_Y0BAcw&utm_campaign=designshare&utm_medium=link&utm_source=editor) 
 (1)管理者具有新增餐廳的權限。現有前端技術僅支持簡單的 API 建立，無法進行後端邏輯 API 的開發。因此後台管理模板無法提供對現有餐廳資料做修改和移除功能。
 
 ＊請以該組帳號進行登入
